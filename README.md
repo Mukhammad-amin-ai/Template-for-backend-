@@ -1,3 +1,5 @@
+<hr>
+
 <h1>Routes:</h1>
 
 <hr>
@@ -11,3 +13,4 @@
 <p>For Use</p>
  <span style="color: blue;">/api/</span>
 
+<hr>
