@@ -58,7 +58,7 @@
  *           type: string
  *           description: A success message
  */
-// LOGIN
+// LOGIN=========================================================
 /**
  * @swagger
  * /api/login:
@@ -164,6 +164,131 @@
  *           description: A success message
  */
 
+// GET====================================================================
+/**
+ * @swagger
+ * /api/todo:
+ *   get:
+ *     summary: get all todo's
+ *     tags: [Todo]
+ *     responses:
+ *       '200':
+ *         description: Successfully retrieved todos
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/RegisterResponse4'
+ *       '500':
+ *         description: Internal server error
+ */
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     RegisterRequest4:
+ *       type: object
+ *       properties:
+ *         title:
+ *           type: string
+ *           description: User email
+ *         description:
+ *           type: string
+ *           description: User password
+ */
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     RegisterResponse4:
+ *       type: object
+ *       properties:
+ *         title:
+ *           type: string
+ *           description: ID of the created user
+ *         description:
+ *           type: string
+ *           description: A success message
+ */
 
 
+// PUT==========================================================================
+/**
+ * @swagger
+ * /api/todo/{id}:
+ *   put:
+ *     summary: Update a todo by ID
+ *     tags: [Todo]
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID of the todo to update
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             $ref: '#/components/schemas/RegisterRequest5'
+ *     responses:
+ *       '200':
+ *         description: Successfully updated todo
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/RegisterResponse5'
+ *       '500':
+ *         description: Internal server error
+ */
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     RegisterRequest5:
+ *       type: object
+ *       properties:
+ *         title:
+ *           type: string
+ *           description: Todo title
+ *         description:
+ *           type: string
+ *           description: Todo description
+ */
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     RegisterResponse5:
+ *       type: object
+ *       properties:
+ *         title:
+ *           type: string
+ *           description: Updated title
+ *         description:
+ *           type: string
+ *           description: Updated description
+ */
 
+//DELETE==========================================================
+/**
+ * @swagger
+ * /api/todo/{id}:
+ *   delete:
+ *     summary: Delete a todo by ID
+ *     tags: [Todo]
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID of the todo to delete
+ *     responses:
+ *       '204':
+ *         description: Successfully deleted todo
+ *       '404':
+ *         description: Todo not found
+ *       '500':
+ *         description: Internal server error
+ */
