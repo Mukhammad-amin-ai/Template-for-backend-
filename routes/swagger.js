@@ -211,6 +211,53 @@
  */
 
 
+
+
+
+// GET BY ID
+/**
+ * @swagger
+ * /api/todo/{id}:
+ *   get:
+ *     summary: Get a todo by ID
+ *     tags: [Todo]
+ *     parameters:
+ *       - name: id
+ *         in: path
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: ID of the todo to retrieve
+ *     responses:
+ *       '200':
+ *         description: Successfully retrieved todo
+ *         content:
+ *           application/json:
+ *             schema:
+ *               $ref: '#/components/schemas/TodoResponse'
+ *       '404':
+ *         description: Todo not found
+ *       '500':
+ *         description: Internal server error
+ */
+
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     TodoResponse:
+ *       type: object
+ *       properties:
+ *         title:
+ *           type: string
+ *           description: ID of the created user
+ *         description:
+ *           type: string
+ *           description: A success message
+ */
+
+
+
 // PUT==========================================================================
 /**
  * @swagger
