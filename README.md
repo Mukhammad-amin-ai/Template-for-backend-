@@ -1,7 +1,7 @@
 <h1>Routes:</h1>
 
 <hr>
-<p>For Documnetation</p>
+<p>For Documentation</p>
 <h3>"/api-docs/"</h3>
 <hr>
 
