@@ -7,7 +7,7 @@ import swaggerUi from 'swagger-ui-express'
 const app = Express();
 const PORT = 3000;
 // const DB = 'mongodb://localhost:27017/todo';
-const DB = "mongodb+srv://amin:<password>@cluster01.kcpynb7.mongodb.net/?retryWrites=true&w=majority"
+const DB = "mongodb+srv://amin:user@cluster01.kcpynb7.mongodb.net/?retryWrites=true&w=majority"
 const options = {
     definition: {
         openapi: "3.1.0",
