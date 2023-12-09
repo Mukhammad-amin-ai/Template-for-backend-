@@ -8,4 +8,5 @@
 <hr>
 <p>For Use</p>
  ### `/api/`
+ <span style="color: blue;">/api/</span>
 
